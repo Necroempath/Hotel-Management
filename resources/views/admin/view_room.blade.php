@@ -92,6 +92,7 @@
                                 <th>Free wi-fi</th>
                                 <th>Image</th>
                                 <th>Delete</th>
+                                <th>Update</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -106,6 +107,7 @@
                                     <img src="{{ asset('storage/' . $room->image) }}" width="60" alt="room image">
                                 </td>
                                 <td><a onclick="return confirm('Are you sure?');" class="btn btn-danger" href="{{url('delete_room', $room->id)}}">Delete</a></td>
+                                <td><a class="btn btn-warning" href="{{url('room_update', $room->id)}}">Update</a></td>
                             </tr>
                             @endforeach
                         </tbody>
